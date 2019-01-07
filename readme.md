@@ -1,4 +1,4 @@
-# [Cryptoinvest](http://cryptoinvestcoin.io/) - Taking masternodes investement game to next Level.
+# [Cryptoinvest](http://cryptoinvestcoin.io/) - Taking masternodes investment Game to next Level.
 
 Shell script to install a cryptoinvest Masternode on a Linux server running Ubuntu 16.04. Use it on your own risk.
 ***
