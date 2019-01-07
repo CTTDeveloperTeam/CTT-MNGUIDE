@@ -1,7 +1,11 @@
-CryptoInvest- Taking masternodes investement game to next Level
+CryptoInvest- Taking masternodes investment game to next Level
+
+
 Shell script to install a CryptoInvest Masternode on a Linux server running Ubuntu 16.04. Use it on your own risk.
 
 VPS installation for version 1.0
+
+
 wget https://github.com/CTTDeveloperTeam/CTTCoin/releases/download/v1.0/ctt-mn.sh && bash ctt-mn.sh
 
 -------------------------------------------------------------------------------------------------------------------
@@ -37,6 +41,8 @@ Alternatively, open Debug Console and type:
 masternode start-alias mn1
 
 Login to your VPS and check your masternode status by running the following command to confirm your MN is running:
+
+
 cryptoinvest-cli masternode status
 
 Usage:
