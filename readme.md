@@ -5,7 +5,7 @@ Shell script to install a cryptoinvest Masternode on a Linux server running Ubun
 
 ## VPS installation for version **1.0**
 ```
-wget https://github.com/CTTDeveloperTeam/CTTCoin/releases/download/v1.0/ctt-mn.sh && bash ctt-mn.sh
+https://github.com/CTTDeveloperTeam/CTT-MNGUIDE/blob/master/ctt-mninstall.sh && bash ctt-mninstall.sh
 ```
 ***
 
