@@ -39,11 +39,13 @@ read DOSETUPTWO
 if [[ $DOSETUPTWO =~ "y" ]] ; then
 
 cryptoinvest-cli stop > /dev/null 2>&1
-wget https://github.com/CTTDeveloperTeam/CTTCoin/releases/download/v1.0/CryptoInvest-1.0.0-x86_64-pc-linux-gnu.zip
-unzip CryptoInvest-1.0.0-x86_64-pc-linux-gnu.zip
+wget https://github.com/CTTDeveloperTeam/CTTCoin/releases/download/v1.1/CryptoInvest-1.1.0-x86_64-pc-linux-gnu.zip -O CryptoInvest-1.1.0-x86_64-pc-linux-gnu.zip
+unzip CryptoInvest-1.1.0-x86_64-pc-linux-gnu.zip
 mv cryptoinvestd /usr/local/bin/cryptoinvestd
 mv cryptoinvest-cli /usr/local/bin/cryptoinvest-cli
 chmod +x /usr/local/bin/cryptoinvest*
+rm -rf CryptoInvest-1.1.0-x86_64-pc-linux-gnu.zip
+
 fi
 
 echo ""
@@ -83,15 +85,23 @@ mkdir -p $CONF_DIR
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > $CONF_DIR/$CONF_FILE
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
 echo "rpcallowip=127.0.0.1" >> $CONF_DIR/$CONF_FILE
-echo "rpcport=3334" >> $CONF_DIR/$CONF_FILE
+echo "rpcport=57811" >> $CONF_DIR/$CONF_FILE
 echo "listen=1" >> $CONF_DIR/$CONF_FILE
 echo "server=1" >> $CONF_DIR/$CONF_FILE
 echo "daemon=1" >> $CONF_DIR/$CONF_FILE
 echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
 echo "masternode=1" >> $CONF_DIR/$CONF_FILE
 echo "port=$PORT" >> $CONF_DIR/$CONF_FILE
-echo "mastenodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
+echo "masternodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
 
 cryptoinvestd -daemon
+
+echo ""
+echo "##########################"
+echo "YOUR IP = $IP:$PORT"
+echo "YOUR PRIVKEY = $PRIVKEY"
+echo "##########################"
+echo ""
+
 
